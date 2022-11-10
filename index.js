@@ -2,7 +2,6 @@ const express= require('express')
 const app= express()
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
-
 var db=require('./connection')
 var collection=require('./collections')
 const {createTokens,validateToken} = require("./jwt")
@@ -18,7 +17,7 @@ db.connect((err)=>{
     console.log('database connected');
   })
 
-app.listen(3000,()=>{
+app.listen(4000,()=>{
     console.log('server is runnig');
 })
 
